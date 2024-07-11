@@ -1,0 +1,18 @@
+import express from 'express'
+import dotenv from 'dotenv';
+import cors from 'cors';
+
+const app = express();
+
+app.use(cors());
+dotenv.config();
+app.use(express.json());
+
+
+app.get('/', (req, res) => {  
+    console.log("Process Begin");
+})
+app.listen(process.env.PORT, ()=>{
+    console.log(`Server is listnening on por̉̉t ${process.env.PORT}!`);
+}
+);
